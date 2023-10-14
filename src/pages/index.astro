@@ -1,19 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import SideBar from '../components/SideBar.astro';
-import Footer from '../components/Footer.astro';
-import ProductContext from '../components/ProductContext.astro';
-
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import SideBar from "../components/SideBar.astro";
+import Footer from "../components/Footer.astro";
+import HomePage from "../components/HomePage.vue";
 ---
+
 <Layout title="azgart">
-
-	<Header />
-	<ProductContext />
-	<SideBar />
-	<Footer />
-
-
-
+  <div class="overflow-hidden">
+    <Header />
+	<!-- <ProductPage /> -->
+    <HomePage client:load/>
+    <SideBar />
+    <Footer />
+  </div>
 </Layout>
-
